@@ -1,0 +1,13 @@
+﻿<form role="form">
+    <label for="text">Добавить новый товар</label>
+    <div class="form-group">
+        <label for="text">Название товара</label>
+        <input type="text" class="form-control" ng-model="productName" placeholder="Введите название товара" />
+    </div>
+    <div class="form-group">
+        <label for="text">Описание</label>
+        <input type="text" class="form-control" ng-model="productDesc" placeholder="Введите описание" />
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="createProduct()">Добавить</button>
+    <button type="button" ng-click="doTheBack()" class="btn btn-success">Отмена</button>
+</form>

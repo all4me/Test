@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div>
+    <div class="container" ng-controller="mainCtrl">
+        <div class="row"><a href="#/createshop">Добавить магазин</a></div>
+        <div id="sortable" class="row">
+            <div ng-repeat="s in shops" class="col-md-3">
+                <div class="panel panel-default">
+                    <p>{{s.name}}</p>
+                    <p>{{s.adress}}</p>
+                    <p class="43">{{s.mode}}</p>
+                    <p class="serialNumber">{{s.serialNumber}}</p>
+                    <span class="glyphicon glyphicon-list-alt" ng-click="getProductList(s.id)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="triggers.showProducts">
+            <div class="col-md-8 col-sm-8 col-lg-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr ng-repeat="p in productList">
+                            <td>{{p.name}}</td>
+                            <td>{{p.desc}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-success" ng-click="triggers.showProducts = false">Ok</button>
+                <a type="button" class="btn btn-success" href="#/createproduct">Добавить товар</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-md-offset-4 col-sm-offset4 col-lg-offset-4">
+                <ng-view></ng-view>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-lg-4"></div>
+                <div id="map">
+
+                </div>
+            
+        </div>
+    </div>
+</div>

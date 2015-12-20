@@ -1,0 +1,17 @@
+﻿<form role="form">
+    <label for="text">Добавить новый магазин</label>
+    <div class="form-group">
+        <label for="text">Название магазина</label>
+        <input type="text" class="form-control" ng-model="shopName" placeholder="Введите название магазина"/>
+    </div>
+    <div class="form-group">
+        <label for="text">Адрес</label>
+        <input type="text" class="form-control" ng-model="shopAdress" placeholder="Введите адрес" />
+    </div>
+    <div class="form-group">
+        <label for="text">Режим работы</label>
+        <input type="text" class="form-control" ng-model="shopMode" placeholder="Введите режим работы" />
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="createNewShop()">Добавить</button>
+    <button type="button" ng-click="doTheBack()" class="btn btn-success">Отмена</button>
+</form>
